@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: hsl(0, 100%, 74%) url("./images/bg-intro-desktop.png") no-repeat;
+    font-family: "Poppins", sans-serif;
+}
+main
+{
+    display: flex;
+    margin: 0% 5%;
+}
+.first_half
+{
+    width: 50%;
+    margin-top: 21%;
+    margin-left: 3%;
+}
+
+.first_half h1
+{
+color: #fff;
+font-size: 40px;
+width: 70%;
+margin-bottom: 3%;
+font-weight: 700;
+}
+.first_half p
+{
+    color: #fff;
+    font-size: 16px;
+    width: 85%;
+}
+
+@media screen and (max-width: 500px){
+    body 
+{
+    background: hsl(0, 100%, 74%) url("./images/bg-intro-mobile.png") no-repeat;
+}
+main 
+{
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0% 5%;
+}
+.first_half
+{
+    width: 100%;
+    margin: 25% auto 10% auto;
+}
+.first_half h1
+{
+font-size: 30px;
+width: 100%;
+text-align: center;
+}
+.first_half p
+{
+  text-align: center;
+    width: 100%;
+}
+
+}
+.second_half
+{
+    width: 50%;
+  margin-top: 8.5%;
+}
+.info_section
+{
+    color: #fff;
+    background-color: hsl(248, 32%, 49%);
+    font-size: 16px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 0%;
+    width: 80%;
+    margin: 0% auto;
+    box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.3);
+}
+.form_section
+{
+    width: 80%;
+    margin: 3% auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5% auto 0% auto;
+    box-shadow: 0px 10px 6px -6px #777;
+}
+#form
+{
+padding: 3% 5% 1% 5%;
+}
+input[type=text]
+{
+    width: 100%;
+  padding: 15px 20px;
+  border-radius: 5px;
+border: solid 1px hsl(246, 25%, 77%);
+color: hsl(249, 10%, 26%) ;
+font-weight: 700;
+}
+
+input[type=email]
+{
+    width: 100%;
+    padding: 15px 20px;
+  border-radius: 5px;
+  border: solid 1px hsl(246, 25%, 77%);
+  color: hsl(249, 10%, 26%) ;
+font-weight: 700;
+}
+input[type=password]
+{
+    width: 100%;
+    padding: 15px 20px;
+  border-radius: 5px;
+  border: solid 1px hsl(246, 25%, 77%);
+  color: hsl(249, 10%, 26%) ;
+font-weight: 700;
+}
+input:focus
+{
+    outline: none;
+border: solid 1px   hsl(248, 32%, 49%);
+}
+input[type=submit]
+{
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 5px;
+  background-color: hsl(154, 59%, 51%);
+  border: none;
+  box-shadow: 0px 7px 6px -6px #777;
+  text-transform: uppercase;
+  color: #fff;
+}
+input[type=submit]:hover
+{
+    cursor: pointer;
+}
+#input_section
+{
+    margin-top: 5%;
+}
+ input + span img
+{
+    position: absolute;
+    right: 13%;
+    margin-top: -35px;
+}
+.error_icon
+{
+  
+    height: 0px;
+    display: none;
+}
+.conclusion_section
+{
+    color: hsl(246, 25%, 77%);
+    font-size: 10px;
+    text-align: center;
+    padding-bottom: 7%;
+}
+.conclusion_section b
+{
+    color: hsl(0, 100%, 74%) ;
+}
+@media screen and (max-width: 500px){
+    .second_half
+    {
+        width: 100%;
+    }
+    .info_section
+    {
+        width: 100%;
+        padding: 20px 50px;
+    }
+    .form_section
+{
+    width: 100%;
+    margin: 10% auto;
+}
+.conclusion_section
+{
+    padding: 2% 20% 8.5% 20%;
+}
+}
+
+
+.firstname_error_message, .lastname_error_message,
+.email_error_message, .password_error_message
+{
+    font-size: 10px;
+    color: hsl(0, 100%, 74%);
+    text-align: right ;
+    
+} 
+.active
+{
+    display: block;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
