@@ -5,9 +5,10 @@ const emailerrorMessage = form.querySelector(".email_error_message");
 const passworderrorMessage = form.querySelector(".password_error_message");
 var errorIcon = document.querySelectorAll(".error_icon");
 
- function validatefName(){
-    var firstName = document.getElementById("firstname");
 
+var firstName = document.getElementById("firstname");
+firstName.addEventListener('keyup' , validatefName)
+ function validatefName(){
     if(firstName.value === "" || firstName.value == null || firstName.value.length < 2)
     {
         firstName.style.borderColor = "hsl(0, 100%, 74%)";
@@ -24,8 +25,9 @@ return true;
     }
 }
 
+var lastName = document.getElementById("lastname");
+lastName.addEventListener('keyup', validatelName)
  function validatelName(){
-    var lastName = document.getElementById("lastname");
    if(lastName.value === "" || lastName.value  == null || lastName.value.length < 2)
     {
         lastName.style.borderColor = "hsl(0, 100%, 74%)";
@@ -42,13 +44,16 @@ return true;
     }
 }
 
+var email = document.getElementById("email");
+email.addEventListener('keyup', validateemail)
     function validateemail(){
-        var email = document.getElementById("email");
+        
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if(email.value === "" || email.value == null)
         {
             email.style.borderColor = "hsl(0, 100%, 74%)";
             errorIcon[2].classList.add("active");
+            document.getElementById('email').placeholder = "email@example/com";
     email.innerText = "Looks like this is not an email";
     return false;
         }
@@ -56,6 +61,7 @@ return true;
     {
         email.style.borderColor = "hsl(0, 100%, 74%)";
         errorIcon[2].classList.add("active");
+        document.getElementById('email').placeholder = "email@example/com";
 emailerrorMessage.innerText = "Looks like this is not an email";
 return false;
     }
@@ -67,9 +73,10 @@ emailerrorMessage.innerText = "";
 return true;
     }
     }
-  
+
+    var password = document.getElementById("password");
+password.addEventListener('keyup', validatepassword)
       function validatepassword(){
-        var password = document.getElementById("password");
          if(password.value === "" || password.value == null)
         {
             password.style.borderColor = "hsl(0, 100%, 74%)";
